@@ -55,8 +55,8 @@ def start(message):
 
         bot.send_message(chanel_id, f'<a href="{message.text}">{inf_dict["name"]}</a>\n'
                                     f'Теги: \n{tags}\n'
-                                    f'Автор: {inf_dict["author"]}\n'
-                                    f'Переводчик: {inf_dict["translator"]}\n'
+                                    f'Автор: #{inf_dict["author"].replace(" ","_")}\n'
+                                    f'Переводчик: #{inf_dict["translator"].replace(" ","_")}\n'
                                     f'Страниц: {inf_dict["str_count"]}', parse_mode="HTML")
     elif message.text == 'pars_alpaca':
         inf_dict = hen_parser()
